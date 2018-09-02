@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="UTF-8">
+
+<head>
+<meta charset="utf-8">
+<title>Sign Up</title>
+<link rel="stylesheet" type="text/css" href="all.css">
+<link href='http://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $("#username").focus(function(){
+            $("#username").css({"border-bottom": "2px solid #FFE000", "color": "black"});
+            $("#username").val("");
+        });
+        $("#email").focus(function(){
+            $("#email").css({"border-bottom": "2px solid #FFE000", "color": "black"});
+            $("#email").val("");
+        });
+        $("#password").focus(function(){
+            $("#password").css({"border-bottom": "2px solid #FFE000", "color": "black"});
+            $("#password").val("");
+        });
+        $("#password_confirm").focus(function(){
+            $("#password_confirm").css({"border-bottom": "2px solid #FFE000", "color": "black"});
+            $("#password_confirm").val("");
+        });
+    });
+    
+    $(function(){
+        $("#alert-danger").hide();
+        $("input").keyup(function(){
+            var pwd1=$("#password").val();
+            var pwd2=$("#password_confirm").val();
+            if(pwd1 != "" || pwd2 != ""){
+                if(pwd1 == pwd2){
+                    $("#alert-danger").hide();
+                    $("#create").css("color", "black");
+                }else{
+                    $("#alert-danger").show();
+                    $("#create").css("color", "#999999");
+                }    
+            }
+        });
+    });
+</script>
+
+</head>
+ 
+<body>
+    <div>
+        <div class="hello top">Hello!</div>
+        <div class="triangle top"></div>
+    </div>
+    
+    <div class="content">
+        <form action="/action_page.php">
+        <div>
+            <p>Username</p>
+            <input type="text" id="username" class="item" value="Shaellina">
+        </div>
+        <div>
+            <p>Email Address</p>
+            <input type="text" id="email" class="item" value="shaellina2@gmail.com">
+        </div>
+        <div>
+            <p>Password</p>
+            <input type="Password" id="password" class="item" value="123456789">
+        </div>
+        <div>
+            <p>Password(Confirm)</p>
+            <input type="Password" id="password_confirm" class="item" value="123456789">
+        </div>
+        <div class="alert-danger" id="alert-danger">Password is not the same.</div>
+       <input type="submit" id="create" class="create submit" value="Create >">
+</form>
+        
+        
+    </div>
+
+
+</body>
+</html>

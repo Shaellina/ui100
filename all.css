@@ -1,0 +1,64 @@
+body{
+    margin:0;
+    padding:0;
+    overflow-x: hidden;
+}
+.top{
+    display: inline-block;
+}
+.hello{
+    font-size: 93px;
+	font-weight: bold;
+	padding-top : 150px;
+    padding-left: 15%;
+}
+.triangle {
+    width: 0;
+    height: 0;
+    border-top: 150px solid #FFE000;
+    border-right: 150px solid #FFE000;
+    border-bottom: 150px solid transparent;
+    border-left: 150px solid transparent;
+    float: right
+}
+
+.content{
+    padding-top: 30px;
+    padding-left: 15%;
+    padding-right: 15%;
+    font-size: 37px;
+	font-weight: normal;
+	color: #808284;
+}
+.item{
+    width: 100%;
+    height: 60px;
+    font-size: 45px;
+    font-weight: 100;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-left-color: transparent;
+    border-bottom: 1px solid #8B8D90;
+    color: #999999;
+}
+
+.create{
+    font-size: 93px;
+	font-weight: bold;
+	padding-top : 60px;
+    padding-left: 15%;
+    border-color: transparent;
+    background-color: transparent;
+    float: right;
+    color: #999999;
+}
+
+input:focus {
+  outline: none;
+}
+
+.alert-danger{
+    color: #ED283B;
+    font-size: 35px;
+    padding-top: 10px;
+}
